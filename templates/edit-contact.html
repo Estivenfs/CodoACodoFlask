@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<form action="/update/{{contact.0}}" method="post">
+    <div class="mb-3">
+      <label for="fullname" class="form-label">Full Name</label>
+      <input type="fullname" name="fullname" class="form-control" id="fullname" value="{{contact.1}}" >
+    </div>
+    <div class="mb-3">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="fullname" name="phone" class="form-control" id="phone" value="{{contact.2}}" >
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" value="{{contact.3}}" >
+        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+{% endblock %}
